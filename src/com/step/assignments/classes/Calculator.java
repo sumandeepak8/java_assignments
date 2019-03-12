@@ -30,10 +30,6 @@ public class Calculator {
         return this.firstNumber + this.secondNumber;
     }
 
-    public double getSubtractionResult() {
-        return this.firstNumber - this.secondNumber;
-    }
-
     public double getMultiplyResult() {
         return this.firstNumber * this.secondNumber;
     }
