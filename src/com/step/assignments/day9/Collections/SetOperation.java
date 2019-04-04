@@ -1,7 +1,9 @@
 package com.step.assignments.day9.Collections;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetOperation {
 
@@ -38,27 +40,34 @@ public class SetOperation {
     }
 
     public static void main(String[] args) {
-        Set<Integer> set1 = new HashSet<Integer>();
-        Set<Integer> set2 = new HashSet<Integer>();
+        Set<Integer> set1 = new TreeSet();
+        Set<Integer> set2 = new HashSet();
+        Set<Integer> set3 = new LinkedHashSet();
 
-        set1.add(3);
-        set1.add(4);
-        set1.add(5);
-        set1.add(6);
         set1.add(9);
+        set1.add(3);
+        set1.add(5);
+        set1.add(4);
+        set1.add(6);
 
         set2.add(6);
         set2.add(8);
         set2.add(7);
         set2.add(4);
 
+        set3.add(9);
+        set3.add(3);
+        set3.add(5);
+        set3.add(4);
+        set3.add(6);
+
         SetOperation setOperation = new SetOperation(set1,set2);
-        System.out.println(set1 + " this is set1");
-        System.out.println(set2 + " this is set2");
+        System.out.println(" this is set1 HashSet " + set1);
+        System.out.println(" this is set2 LinkdeHashSet " + set2);
+        System.out.println(" this is set3 TreeSet " + set3);
 
-        System.out.println(setOperation.getUnion() + "this is union ");
-        System.out.println(setOperation.getDifference() + "this is difference ");
-        System.out.println(setOperation.getIntersection() + "this is intersection ");
-
+        System.out.println("union " + setOperation.getUnion());
+        System.out.println("difference " + setOperation.getDifference());
+        System.out.println("intersection " + setOperation.getIntersection());
     }
 }
